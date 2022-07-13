@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 text-white mx-auto">
+    <table class="table table-bordered table-striped">
+    <thead>
+   <tr class="text-center bg-dark text-white">
+    <th>S/N</th>
+    <th>User's Identity</th>
+    <th>Description</th>
+    <th>Status</th>
+   </tr>
+    </thead>
+
+    <tbody *ngFor="let todo of Todos">
+    <tr>
+    <td>{{todo.id}}</td>
+    <td>{{todo.userId}}</td>
+    <td>{{todo.title}}</td>
+    <td [class]="todo.completed==true?'text-success':'text-danger'">{{todo.completed==true?'Completed':'Incomplete'}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+</div>

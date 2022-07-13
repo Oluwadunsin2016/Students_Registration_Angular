@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="cover">
+      <div *ngIf="status; else noDetail">
+        <table class="table bg-white col-6 shadow-white">
+          <thead>
+            <tr class="text-center bg-info text-white">
+              <th colspan="3" class="con"><h4>Student's Details</h4><button (click)="cancel()">X</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="7">
+                <img [src]="details.Image" alt="" height="300" />
+              </td>
+              <th>Name:</th>
+              <td>{{ details.First_Name }} {{ details.Last_Name }}</td>
+            </tr>
+            <tr>
+              <th>Date of Birth:</th>
+              <td>{{ details.Date_of_Birth }}</td>
+            </tr>
+            <tr>
+              <th>Gender:</th>
+              <td>{{ details.Gender }}</td>
+            </tr>
+            <tr>
+              <th>Email Address:</th>
+              <td>{{ details.Email }}</td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th>
+              <td>{{ details.Phone_Number }}</td>
+            </tr>
+            <tr>
+              <th>Matric Number:</th>
+              <td>{{ details.Matric_Number }}</td>
+            </tr>
+
+            <tr>
+              <th></th>
+              <td>
+                <button
+                  mat-raised-button
+                  class="btn btn-warning mx-4"
+                  (click)="edit()"
+                >
+                  Edit</button>
+                  <!-- <i class="fab fa-book bg-dark fa-2x" aria-hidden="true" (click)="delete()"></i> -->
+            <button class="btn btn-danger mx-4" (click)="delete()">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ng-template #noDetail class="description">
+        <div class="text-center">
+        <img src="../../assets/userIcon.png" alt="">
+          <p class=""><em class="">Click on the image</em></p>
+          <p>
+            <em
+              >To be able to see every detail partaining to a particular
+              student</em
+            >
+          </p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

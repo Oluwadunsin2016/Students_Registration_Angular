@@ -1,0 +1,55 @@
+.cover{
+margin-top: 70px;
+}
+
+
+.con{
+/* display: flex; */
+position: relative;
+width: 100%;
+}
+
+.con h4{
+text-align: center;
+padding-top: 15px;
+position: relative;
+font-weight: bold;
+font-size: 30px;
+}
+.con button{
+height: 35px;
+width: 35px;
+background-color: transparent;
+position: absolute;
+right: 0;
+top: 0;
+color: white;
+font-weight: bold;
+text-align: center;
+border: none;
+}
+.con button:hover{
+background-color: red;
+}
+
+td, td button{
+font-size: 18px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+font-style: italic;
+}
+
+tbody tr th{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 16px;
+}
+
+em{
+font-size: 25px;
+color: blueviolet;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .description{
+
+} */

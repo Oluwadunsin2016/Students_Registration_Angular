@@ -1,0 +1,102 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="">
+      <h1 class="w-100 text-center mb-4">Edit Student</h1>
+      <div>
+        <input
+          type="text"
+          name="FirstName"
+          [(ngModel)]="firstName"
+          placeholder="First Name"
+          id="FirstName"
+          class="form-control mb-2"
+          required
+          pattern="[a-zA-Z]{3,}"
+          title="First name must be atleast 3 letters"
+          autofocus
+        />
+
+        <input
+          type="text"
+          name="LastName"
+          [(ngModel)]="lastName"
+          placeholder="last Name"
+          id="LastName"
+          class="form-control mb-2"
+          pattern="[a-zA-Z]{3,}"
+          title="First name must be atleast 3 letters"
+          required
+        />
+        <input
+          type="date"
+          name="LastName"
+          [(ngModel)]="dob"
+          placeholder="Date of Birth"
+          id="dob"
+          class="form-control mb-2"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Email"
+          id="email"
+          class="form-control mb-2"
+          required
+          pattern="[a-zA-Z0-9]{3,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,4}"
+        />
+
+        <input
+          type="tel"
+          [(ngModel)]="phoneNumber"
+          placeholder="Phone Number"
+          id="phone"
+          class="form-control mb-2"
+          required
+          pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+          title="Your phone number format should be: #### ### ####"
+        />
+
+        <select class="form-control mb-2" name="gender" [(ngModel)]="gender">
+          <option value="Choose"></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Neutral">Neutral</option>
+        </select>
+        <input
+          type="file"
+          name="file"
+          [(ngModel)]="file"
+          placeholder="file"
+          id="file"
+          class="form-control mb-2"
+          (change)="onChange($event)"
+        />
+
+        <div class="text-center mt-4">
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="Back"
+            class="btn btn-danger mx-3"
+            (click)="back()"
+          />
+
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="Save"
+            class="btn btn-success mx-3"
+            (click)="update()"
+          />
+        </div>
+
+        <!-- <button (click)="rand(10)">rand</button> -->
+      </div>
+    </div>
+  </div>
+</div>

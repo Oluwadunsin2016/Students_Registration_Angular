@@ -1,0 +1,20 @@
+<div class="contain">
+  <h1 class="text-center bg-primary sticky-top">List of Students</h1>
+  <div class="cont">
+    <div class="cover">
+      <div id="first" class="text-center shadow">
+        <!-- <h2 class="text-center list">List of Students</h2> -->
+        <div *ngFor="let id = index; let student of students">
+          <div id="con" (click)="view(id)">
+            <div class="user">
+              <img [src]="student.Image" alt="" />
+            </div>
+            <h3>{{ student.First_Name }} {{ student.Last_Name }}</h3>
+          </div>
+        </div>
+      </div>
+
+      <app-student-details class="child"></app-student-details>
+    </div>
+  </div>
+</div>
